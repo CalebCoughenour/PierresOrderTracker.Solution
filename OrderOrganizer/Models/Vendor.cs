@@ -26,5 +26,17 @@ namespace OrderOrganizer.Models
     {
       return _vendors;
     }
+
+    public static Vendor FindVendor(string name)
+    {
+      foreach (Vendor vendor in _vendors)
+      {
+        if (name == vendor.Name)
+        {
+          return vendor;
+        }
+      }
+      return null;
+    }
   }
 }
