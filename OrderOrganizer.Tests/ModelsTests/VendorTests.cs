@@ -41,5 +41,17 @@ namespace OrderOrganizer.Tests
       List<Vendor> result = Vendor.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+    [TestMethod]
+    public void Find_ReturnsCorrectVendor_Vendor()
+    {
+      string name1 = "Wonder Bread";
+      string description1 = "Helps build strong bodies 12 ways!";
+      string name2 = "Bimbo";
+      string description2 = "Worldwide bakery!";
+      Vendor newVendor1 = new Vendor(name1, description1);
+      Vendor newVendor2 = new Vendor(name2, description2);
+      Vendor result = Vendor.Find(newVendor1.Name);
+      Assert.AreEqual(newVendor1, result);
+    }
   }
 }
