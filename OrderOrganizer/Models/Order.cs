@@ -8,6 +8,7 @@ namespace OrderOrganizer.Models
     public string OrderDescription { get; set; }
     public string OrderDate { get; set; }
     private static double _Price = 5;
+    private static List<Order> _orders = new List<Order>{ };
 
     public static double Price
     {
@@ -20,6 +21,10 @@ namespace OrderOrganizer.Models
       OrderDescription = orderDescription;
       OrderDate = orderDate;
       _Price = Price;
+    }
+    public static void ClearAll()
+    {
+      _orders.Clear();
     }
   }
 }
