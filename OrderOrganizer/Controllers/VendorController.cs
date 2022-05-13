@@ -5,15 +5,15 @@ using OrderOrganizer.Models;
 
 namespace OrderOrganizer.Controllers
 {
-  public class VendorController : Controller
+  public class VendorsController : Controller
   {
-    [HttpGet("/vendor")]
+    [HttpGet("/vendors")]
     public ActionResult Index()
     {
       List<Vendor> allVendors = Vendor.GetAll();
       return View(allVendors);
     }
-    [HttpGet("/vendor/new")]
+    [HttpGet("/vendors/new")]
     public ActionResult New()
     {
       return View();
