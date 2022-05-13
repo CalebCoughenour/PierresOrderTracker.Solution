@@ -26,5 +26,16 @@ namespace OrderOrganizer.Models
     {
       return _orders;
     }
+    public static Order FindOrder(string name)
+    {
+      foreach (Order order in _orders)
+      {
+        if (name == order.OrderName)
+        {
+          return order;
+        }
+      }
+      return null;
+    }
   }
 }
