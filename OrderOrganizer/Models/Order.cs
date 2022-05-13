@@ -7,6 +7,7 @@ namespace OrderOrganizer.Models
     public string OrderName { get; set; }
     public string OrderDescription { get; set; }
     public string OrderDate { get; set; }
+    public int Id { get; }
     private static List<Order> _orders = new List<Order>{ };
 
 
@@ -16,6 +17,7 @@ namespace OrderOrganizer.Models
       OrderDescription = orderDescription;
       OrderDate = orderDate;
       _orders.Add(this);
+      Id = _orders.Count;
     }
     public static void ClearAll()
     {
