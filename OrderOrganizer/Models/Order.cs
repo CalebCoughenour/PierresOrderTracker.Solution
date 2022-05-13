@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace OrderOrganizer
+namespace OrderOrganizer.Models
 {
   public class Order
   {
@@ -8,6 +8,6 @@ namespace OrderOrganizer
     public string OrderDescription {get; set;}
     public string OrderDate {get; set;}
     public int OrderPrice {get; set;}
-    
+
   }
 }

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace OrderOrganizer
+namespace OrderOrganizer.Models
 {
   public class Vendor
   {
