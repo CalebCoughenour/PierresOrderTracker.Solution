@@ -13,24 +13,30 @@ namespace OrderOrganizer.Controllers
       List<Vendor> allVendors = Vendor.GetAll();
       return View(allVendors);
     }
+    
     [HttpGet("/vendors/new")]
     public ActionResult New()
     {
       return View();
     }
+
     [HttpPost("/vendors")]
     public ActionResult Create(string vendorName, string vendorDescription)
     {
       Vendor newVendor = new Vendor(vendorName, vendorDescription);
       return RedirectToAction("Index");
     }
+
     [HttpGet("/vendors/{vendorName}")]
     public ActionResult Show(string vendorName)
     {
-      Vendor vendor = Vendor.FindVendor(vendorName);
-      return View(vendor);
+      Dictionary<string, object> model = new Dictionary<string, object>();
+      Vendor selectedVendor = Vendor.FindVendor(vendorName);
+      List<Order> vendorOrders = selectedVendor.Orders;
+      model.Add("vendor", selectedVendor);
+      model.Add("order", vendorOrders);
+      return View(model);
     }
-
 
   }
 }
