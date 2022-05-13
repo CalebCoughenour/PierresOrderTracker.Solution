@@ -24,6 +24,13 @@ namespace OrderOrganizer.Controllers
       Vendor newVendor = new Vendor(vendorName, vendorDescription);
       return RedirectToAction("Index");
     }
+    [HttpGet("/vendors/{vendorName}")]
+    public ActionResult Show(string vendorName)
+    {
+      Vendor vendor = Vendor.FindVendor(vendorName);
+      return View(vendor);
+    }
+
 
   }
 }
