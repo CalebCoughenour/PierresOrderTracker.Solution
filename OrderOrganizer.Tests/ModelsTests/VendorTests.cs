@@ -50,8 +50,21 @@ namespace OrderOrganizer.Tests
       string description2 = "Worldwide bakery!";
       Vendor newVendor1 = new Vendor(name1, description1);
       Vendor newVendor2 = new Vendor(name2, description2);
-      Vendor result = Vendor.Find(newVendor1.Name);
+      Vendor result = Vendor.FindVendor(newVendor1.Name);
       Assert.AreEqual(newVendor1, result);
+    }
+    [TestMethod]
+    public void AddVendor_AddOrderToVendor_OrderList()
+    {
+      string description = "10 loaves";
+      Order newOrder = new Order(description);
+      List<Order> newOrderList = new List<Order> { newOrder };
+      string name = "Wonder Bread";
+      string description1 = "Helps build strong bodies 12 ways!";
+      Vendor newVendor = new Vendor(name, description1);
+      newVendor.AddOrder(newOrder);
+      List<Order> result = newVendor.Orders;
+      CollectionAssert.AreEqual(newOrderList, result);
     }
   }
 }
