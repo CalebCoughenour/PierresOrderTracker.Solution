@@ -5,9 +5,9 @@ namespace OrderOrganizer.Models
   public class Vendor
   {
     private static List<Vendor> _vendors = new List<Vendor>{};
-    public string Name {get; set;}
-    public string Description {get; set;}
-    public List<Order> Orders {get; set;}
+    public string Name { get; set; }
+    public string Description { get; set; }
+    public List<Order> Orders { get; set; }
 
     public Vendor(string vendorName, string vendorDescription)
     {
@@ -38,5 +38,11 @@ namespace OrderOrganizer.Models
       }
       return null;
     }
+
+    public void AddOrder(Order order)
+    {
+      Orders.Add(order);
+    }
+
   }
 }
