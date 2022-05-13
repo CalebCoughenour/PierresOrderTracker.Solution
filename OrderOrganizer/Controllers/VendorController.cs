@@ -33,9 +33,21 @@ namespace OrderOrganizer.Controllers
       Dictionary<string, object> model = new Dictionary<string, object>();
       Vendor selectedVendor = Vendor.FindVendor(vendorName);
       List<Order> vendorOrders = selectedVendor.Orders;
-      model.Add("vendor", selectedVendor);
-      model.Add("order", vendorOrders);
+      model.Add("vendors", selectedVendor);
+      model.Add("orders", vendorOrders);
       return View(model);
+    }
+    [HttpPost("/vendors/{vendorId}/orders")]
+    public ActionResult Create(int vendorId, string orderDescription, string orderName, string orderDate)
+    {
+      Dictionary<string, object> model = new Dictionary<string, object>();
+      Vendor foundVendor = Vendor.Find(vendorId);
+      Order newOrder = new Order(orderName, orderDescription, orderDate);
+      foundVendor.AddOrder(newOrder);
+      List<Order> vendorOrders = foundVendor.Orders;
+      model.Add("orders", vendorOrders);
+      model.Add("vendors", foundVendor);
+      return View("Show", model);
     }
 
   }
