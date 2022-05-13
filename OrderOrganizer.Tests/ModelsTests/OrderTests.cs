@@ -12,6 +12,7 @@ namespace OrderOrganizer.Tests
     {
       Order.ClearAll();
     }
+
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
@@ -28,6 +29,13 @@ namespace OrderOrganizer.Tests
       Assert.AreEqual(description, result);
     }
     [TestMethod]
+    public void GetAll_ReturnsEmptyList_OrderList()
+    {
+      List<Order> newOrder = new List<Order> { };
+      List<Order> result = Order.GetAll();
+      CollectionAssert.AreEqual(newOrder, result);
+    }
+    [TestMethod]
     public void GetAll_ReturnsAllOrders_OrderList()
     {
       string description1 = "testdescription1";
@@ -42,6 +50,20 @@ namespace OrderOrganizer.Tests
 
       List<Order> result = Order.GetAll();
       CollectionAssert.AreEqual(newList, result);
+    }
+    [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      string description1 = "testdescription1";
+      string name1 = "testname1";
+      string date1 = "testdate1";
+      string description2 = "testdescription2";
+      string name2 = "testname2";
+      string date2 = "testdate2";
+      Order newOrder1 = new Order(name1, description1, date1);
+      Order newOrder2 = new Order(name2, description2, date2);
+      Order result = Order.FindOrder(newOrder1.OrderName);
+      Assert.AreEqual(newOrder1, result);
     }
   }
 }
