@@ -57,11 +57,13 @@ namespace OrderOrganizer.Tests
     public void AddVendor_AddOrderToVendor_OrderList()
     {
       string description = "10 loaves";
-      Order newOrder = new Order(description);
+      string name = "Bimbo";
+      string date = "12/22/22";
+      Order newOrder = new Order(name, description, date);
       List<Order> newOrderList = new List<Order> { newOrder };
-      string name = "Wonder Bread";
+      string vendorName = "Wonder Bread";
       string description1 = "Helps build strong bodies 12 ways!";
-      Vendor newVendor = new Vendor(name, description1);
+      Vendor newVendor = new Vendor(vendorName, description1);
       newVendor.AddOrder(newOrder);
       List<Order> result = newVendor.Orders;
       CollectionAssert.AreEqual(newOrderList, result);
