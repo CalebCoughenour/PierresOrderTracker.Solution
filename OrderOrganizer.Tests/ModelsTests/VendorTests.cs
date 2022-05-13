@@ -14,5 +14,14 @@ namespace OrderOrganizer.Tests
       Vendor newVendor = new Vendor("Wonder", "Helps build strong bodies 12 ways!");
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
+    [TestMethod]
+    public void GetName_ReturnsName_String()
+    {
+      string name = "Wonder Bread";
+      string description = "Helps build strong bodies 12 ways!";
+      Vendor newVendor = new Vendor(name, description);
+      string result = newVendor.Name;
+      Assert.AreEqual(name, result);
+    }
   }
 }
