@@ -7,7 +7,8 @@
     <link href="~/css/styles.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <form action="/vendors/@Model.Name/orders" method="post">
+    <form action="/vendors/@Model.Id/orders" method="post">
+      <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
       <label for="orderName">Order Name:</label>
       <input id="orderName" name="orderName" type="text">
       <label for="orderDescription">Order Description:</label>

@@ -9,12 +9,13 @@
   <body>
     <h1>Order Details: </h1>
     <h4>Vendor: @Model["vendors"].Name</h4>
-    <h4>Order Name:@Model["orders"].OrderName</h4>
-    <h4>Order Description:@Model["orders"].OrderDescription</h4>
-    <h4>Order Date:@Model["orders"].OrderDate</h4>
+    <h4>Order Name: @Model["orders"].OrderName</h4>
+    <h4>Order Description: @Model["orders"].OrderDescription</h4>
+    <h4>Order Date: @Model["orders"].OrderDate</h4>
+    <h4>Order Price: @Model["orders"].Price</h4>
     
 
-    <a href='/vendors/@Model["vendors"].Name/orders/new'><button class="btn btn-primary">Add a new order</button></a>
+    <a href='/vendors/@Model["vendors"].Name'><button class="btn btn-primary">Return to orders</button></a>
     <a href='/vendors'><button class="btn btn-primary">Vendor list</button></a>
     <a href="/"><button class="btn btn-primary">Home</button></a>
   </body>
