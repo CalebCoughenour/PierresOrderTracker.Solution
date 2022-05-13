@@ -1,37 +1,55 @@
-# {Application Name}
+# Pierre's Bakery Orders
 
-#### By **{List of contributors}**
+#### By _**Caleb Coughenour**_
 
-#### {Brief description of application}
+#### Bakery order organizer for vendors
 
 ## Technologies Used
 
-* List all
-* the major technologies
-* you used in your project
-* here
+* C#
+* HTML
+* CSS
+* REPL
+* .NET
+* MSTest
+* MVC
+* Razor
+
 
 ## Description
 
-{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}
+This website was made using the ASP.NET MVC standard. It is a site that asks a user to create their vendor. They then can add orders to the vendor that they have added. Once an order has been added the user can click the order to see the details of the entered order. 
+
+## Necessary Tools
+
+* [REPL](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-5.0.401-windows-x64-installer)
+* MSTest (optional but needed if you want to run the tests)
+* .NET (install using "dotnet tool install -g dotnet-script" in console)
 
 ## Setup/Installation Requirements
 
-* This is a great place
-* to list setup instructions
-* in a simple
-* easy-to-understand
-* format
+* Copy the git repository url from the "code" drop down on this github page
+* Open a shell program & navigate to your desktop
+* Clone the repository using the copied URL and the "git clone" command
+* In the shell program, navigate to the root directory of the newly created file called "OrderOrganizer.Solution"
+* From the root directory, navigate to the directory named "OrderOrganizer"
+* In this directory run the command "dotnet build"
+* In this directory type "dotnet run" to run the program
+* Open a web browser and plug "http://localhost:5000/" into the URL bar
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this application depends on? We recommend deleting the project from your desktop, re-cloning the project from GitHub, and writing down all the steps necessary to get the project working again.}_
+## Test Instructions
+
+* Using a shell program, navigate from the root directory to the directory named "OrderOrganizer.Tests"
+* In this directory run "dotnet restore"
+* Next run "dotnet test", this will run all written tests and display results in the console
+
 
 ## Known Bugs
 
-* Any known issues
-* should go here
+* _No known issues_
 
 ## License
 
-[MIT](LICENSE)
+_[MIT License](license)_
 
-Copyright (c) date author name(s)
+Copyright (c) _5/13/22_ _Caleb Coughenour_
