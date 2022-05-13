@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace NamespaceOfProject.Controllers
+namespace OrderOrganizer.Controllers
 {
     public class HomeController : Controller
     {
