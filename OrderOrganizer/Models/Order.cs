@@ -8,6 +8,7 @@ namespace OrderOrganizer.Models
     public string OrderDescription { get; set; }
     public string OrderDate { get; set; }
     public int Id { get; }
+    public int Price { get; }
     private static List<Order> _orders = new List<Order>{ };
 
 
@@ -18,6 +19,7 @@ namespace OrderOrganizer.Models
       OrderDate = orderDate;
       _orders.Add(this);
       Id = _orders.Count;
+      Price = 5;
     }
     public static void ClearAll()
     {
@@ -38,6 +40,10 @@ namespace OrderOrganizer.Models
         }
       }
       return null;
+    }
+    public static Order Find(int searchId)
+    {
+      return _orders[searchId-1];
     }
   }
 }
