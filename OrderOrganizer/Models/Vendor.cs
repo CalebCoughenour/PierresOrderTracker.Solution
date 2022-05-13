@@ -16,5 +16,15 @@ namespace OrderOrganizer.Models
       Orders = new List<Order>{};
       _vendors.Add(this);
     }
+
+    public static void ClearAll()
+    {
+      _vendors.Clear();
+    }
+
+    public static List<Vendor> GetAll()
+    {
+      return _vendors;
+    }
   }
 }
