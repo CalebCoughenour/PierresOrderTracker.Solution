@@ -7,13 +7,21 @@
     <link rel="stylesheet" type="text/css" href="~/css/styles.css">
   </head>
   <body>
+    <div class="topnav">
+      <a id="nav-name-link" href="/"><h1 class="nav-title">Pierre's Orderbook</h1></a>
+      <a id="nav-link" href="/" class="active">Home</a>
+      <a id="nav-link" href="/vendors/new">New Vendor</a>
+      <a id="nav-link" href="/vendors">Check Vendors</a>
+    </div>
     <div class="container">
-      <h1 id="center-title">Welcome to Pierre's order book</h1>
-      <p id="center-paragraph">About Pierre's Bakery: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis velit eu mi varius finibus ac ac elit. Integer quis velit non ex tempus accumsan. Nam eu velit vitae mi porta consectetur. Sed diam nulla, malesuada sit amet viverra eget, maximus ac lorem.</p>
-      <h2>Add/Check Orders:</h2>
-      <p>You will need to add your vendor first then you can add orders to your vendor!</p>
-      <a href="/vendors/new"><button class="btn btn-success">New Order</button></a>
-      <a href="/vendors"><button class="btn btn-success">Check Orders</button></a>
+      <div class="card" id="header-card">
+        <h1 id="center-title">Welcome to Pierre's order book</h1>
+      </div>
+      <div class="card" id="order-card">
+        <p id="center-paragraph">About Pierre's Bakery: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis velit eu mi varius finibus ac ac elit. Integer quis velit non ex tempus accumsan. Nam eu velit vitae mi porta consectetur. Sed diam nulla, malesuada sit amet viverra eget, maximus ac lorem.</p>
+        <h2>Add/Check Orders:</h2>
+        <p id="order-paragraph">You will need to add your vendor first then you can add orders to your vendor from the top nav bar!</p>
+      </div>
     </div>
   </body>
 </html>
