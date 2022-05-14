@@ -22,16 +22,17 @@ This website was made using the ASP.NET MVC standard. It is a site that asks a u
 
 ## Necessary Tools
 
-* [REPL](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-5.0.401-windows-x64-installer)
+* [REPL](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-5.0.401-windows-x64-installer) - restart terminal after install
 * MSTest (optional but needed if you want to run the tests)
 * .NET (install using "dotnet tool install -g dotnet-script" in console)
+  - Configure Bash environment variables by running "echo 'export PATH=$PATH:~/.dotnet/tools' >> ~/.bash_profile" in your gitbash terminal
 
 ## Setup/Installation Requirements
 
 * Copy the git repository url from the "code" drop down on this github page
 * Open a shell program & navigate to your desktop
 * Clone the repository using the copied URL and the "git clone" command
-* In the shell program, navigate to the root directory of the newly created file called "OrderOrganizer.Solution"
+* In the shell program, navigate to the root directory of the newly created file called "PierresOrderTracker.Solution"
 * From the root directory, navigate to the directory named "OrderOrganizer"
 * In this directory run the command "dotnet build"
 * In this directory type "dotnet run" to run the program
