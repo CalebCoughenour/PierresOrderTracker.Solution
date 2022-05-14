@@ -38,9 +38,11 @@ body {
   margin-right: 15px;
   float: left;
   text-decoration: none;
-  -webkit-text-fill-color: yellow;
+  color: yellow;
+  text-shadow: rgb(0, 0, 0) 2px 2px;
+  /* -webkit-text-fill-color: yellow;
   -webkit-text-stroke: #000;
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 1px; */
 }
 
 .topnav {
