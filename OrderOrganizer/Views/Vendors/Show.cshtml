@@ -17,7 +17,7 @@
     <ul>
     @foreach (Order order in @Model["orders"])
     {
-      <a href='/vendors/@Model["vendors"].Id/orders/@order.Id'>@order.OrderName</a>
+      <a class="order-links" href='/vendors/@Model["vendors"].Id/orders/@order.Id'>@order.OrderName</a>
     }
     </ul>
 
