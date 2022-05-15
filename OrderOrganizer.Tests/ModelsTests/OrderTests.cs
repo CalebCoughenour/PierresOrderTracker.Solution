@@ -82,5 +82,22 @@ namespace OrderOrganizer.Tests
       Order.PriceAdjuster(newOrder.OrderType);
       Assert.AreEqual(6, newOrder.Price);
     }
+
+    [TestMethod]
+    public void AdjustedBool_ChangesBoolToTrueIfPriceIsAdjusted_Bool()
+    {
+      string description = "testdesc";
+      string name = "testname";
+      string date = "testdate";
+      string type = "bread";
+      Order newOrder = new Order(name, description, date, type);
+      Order.PriceAdjuster(newOrder.OrderType);
+      string description2 = "testdesc";
+      string name2 = "testname";
+      string date2 = "testdate";
+      string type2 = "bread";
+      Order newOrder2 = new Order(name2, description2, date2, type2);
+      Assert.AreEqual(true, newOrder.PriceAdjusted);
+    }
   }
 }
