@@ -38,12 +38,13 @@ namespace OrderOrganizer.Controllers
       return View(model);
     }
     [HttpPost("/vendors/{vendorId}/orders")]
-    public ActionResult Create(int vendorId, string orderDescription, string orderName, string orderDate)
+    public ActionResult Create(int vendorId, string orderDescription, string orderName, string orderDate, string orderType)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
       Vendor foundVendor = Vendor.Find(vendorId);
-      Order newOrder = new Order(orderName, orderDescription, orderDate);
+      Order newOrder = new Order(orderName, orderDescription, orderDate, orderType);
       foundVendor.AddOrder(newOrder);
+      Order.PriceAdjuster(orderType);
       List<Order> vendorOrders = foundVendor.Orders;
       model.Add("orders", vendorOrders);
       model.Add("vendors", foundVendor);
