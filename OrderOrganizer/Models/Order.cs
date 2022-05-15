@@ -26,21 +26,41 @@ namespace OrderOrganizer.Models
       PriceAdjusted = false;
     }
 
-    public static void PriceAdjuster(string orderType) 
+    // public static void PriceAdjuster(string orderType) 
+    // {
+    //   foreach (Order order in _orders)
+    //   {
+    //     if(orderType == "bread" && order.PriceAdjusted == false)
+    //     {
+    //       order.Price += 1;
+    //       order.PriceAdjusted = true;
+    //     }
+    //     else
+    //     {
+    //       order.Price += 2;
+    //       order.PriceAdjusted = true;
+    //     }
+    //   }
+    // }
+
+    public static List<Order> PriceAdjuster(string orderType) 
     {
-      foreach (Order order in _orders)
+      for (int i = 0; i < _orders.Count; i++)
       {
-        if(orderType == "bread" && order.PriceAdjusted == false)
+        if(orderType == "bread" && _orders[i].PriceAdjusted == false)
         {
-          order.Price += 1;
-          order.PriceAdjusted = true;
+          _orders[i].Price += 1;
+          _orders[i].PriceAdjusted = true;
+          return _orders;
         }
-        else
+        else if (orderType == "pastry" && _orders[i].PriceAdjusted == false)
         {
-          order.Price += 2;
-          order.PriceAdjusted = true;
+          _orders[i].Price += 2;
+          _orders[i].PriceAdjusted = true;
+          return _orders;
         }
       }
+      return _orders;
     }
     public static void ClearAll()
     {
