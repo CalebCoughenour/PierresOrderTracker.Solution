@@ -8,17 +8,18 @@
   </head>
   <body>
     <form action="/vendors/@Model.Id/orders" method="post">
-      <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
+      <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id" required>
       <label for="orderName">Order Name:</label>
-      <input id="orderName" name="orderName" type="text">
-      <select class="form-control" id="orderType">
+      <input id="orderName" name="orderName" type="text" required>
+      <label for="orderType">What type of order?</label>
+      <select class="form-control" id="orderType" required>
         <option value="bread">Bread</option>
         <option value="pastry">Pastries</option> 
       </select>
       <label for="orderDescription">Order Description:</label>
-      <input id="orderDescription" name="orderDescription" type="text">
+      <input id="orderDescription" name="orderDescription" type="text" required>
       <label for="orderDate">Order Date:</label>
-      <input id="orderDate" name="orderDate" type="date">
+      <input id="orderDate" name="orderDate" type="date" required>
       <button type="submit">Submit</button>
     </form>
   </body>
