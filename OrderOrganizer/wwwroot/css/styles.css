@@ -1,6 +1,9 @@
 body {
-  background-color: rgb(233, 233, 18);
+  background-color: rgb(216, 142, 3);
   text-align: center;
+}
+img {
+  float: left;
 }
 
 #center-paragraph {
@@ -36,6 +39,25 @@ body {
 
 #center-title {
   margin-top: 200px;
+}
+
+#priceList {
+  margin: auto;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: large;
+}
+
+.order-header {
+  text-decoration: underline;
+}
+
+.price-header {
+  text-decoration: underline;
+}
+
+.about-header {
+  text-decoration: underline;
 }
 
 .topnav {
