@@ -11,8 +11,9 @@
     <h4>Vendor: @Model["vendors"].Name</h4>
     <h4>Order Name: @Model["orders"].OrderName</h4>
     <h4>Order Description: @Model["orders"].OrderDescription</h4>
+    <h4>Order Type: @Model["orders"].OrderType</h4>
     <h4>Order Date: @Model["orders"].OrderDate</h4>
-    <h4>Order Price: @Model["orders"].Price</h4>
+    <h4>Order Price: $@Model["orders"].Price</h4>
     
 
     <a href='/vendors/@Model["vendors"].Name'><button class="btn btn-primary">Return to orders</button></a>
