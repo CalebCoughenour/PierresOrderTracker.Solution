@@ -59,7 +59,8 @@ namespace OrderOrganizer.Tests
       string description = "10 loaves";
       string name = "Bimbo";
       string date = "12/22/22";
-      Order newOrder = new Order(name, description, date);
+      string type = "bread";
+      Order newOrder = new Order(name, description, date, type);
       List<Order> newOrderList = new List<Order> { newOrder };
       string vendorName = "Wonder Bread";
       string description1 = "Helps build strong bodies 12 ways!";
